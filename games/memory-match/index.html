@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match - Golden Hour</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="memorymatch.css">
+    <script src="../../games-audio.js"></script>
+</head>
+<body>
+    <div class="game-header">
+        <a href="../../index.html" class="back-btn">⬅ Back to Golden Hour</a>
+        <h2>Memory Match</h2>
+        <button class="btn btn-secondary btn-audio-toggle">🔊 Music: On</button>
+    </div>
+    
+    <div class="game-wrapper">
+        <div class="game-area">
+            <div class="scoreboard">
+                <div>Moves: <span id="moves-val" class="score-val">0</span></div>
+            </div>
+
+            <div class="board-outer">
+                <div id="memory-board" class="memory-board"></div>
+            </div>
+
+            <div class="status-box" id="status-box">
+                Flip two cards to find matching emoji pairs!
+            </div>
+
+            <button class="btn btn-primary" id="btn-restart" style="margin-top: 1rem;">Restart Game</button>
+        </div>
+    </div>
+    
+    <script src="memorymatch.js"></script>
+</body>
+</html>

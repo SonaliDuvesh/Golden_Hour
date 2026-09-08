@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake - Golden Hour</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="snake.css">
+    <script src="../../games-audio.js"></script>
+</head>
+<body>
+    <div class="game-header">
+        <a href="../../index.html" class="back-btn">⬅ Back to Golden Hour</a>
+        <h2>Snake Game</h2>
+        <button class="btn btn-secondary btn-audio-toggle">🔊 Music: On</button>
+    </div>
+    
+    <div class="game-wrapper">
+        <div class="game-area">
+            <div class="scoreboard">
+                <div>Score: <span id="score-val" class="score-val">0</span></div>
+                <div>Difficulty: <span id="difficulty-lbl" class="score-val">Medium</span></div>
+                <div>High Score: <span id="high-score-val" class="score-val">0</span></div>
+            </div>
+
+            <div id="difficulty-panel" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; align-items: center; justify-content: center;">
+                <label for="difficulty-select" style="font-weight: 600;">Select Difficulty:</label>
+                <select id="difficulty-select" class="input-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <canvas id="snake-canvas" width="400" height="400"></canvas>
+
+            <div class="controls-info">
+                Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move the snake.
+            </div>
+
+            <button class="btn btn-primary" id="btn-restart" style="margin-top: 1rem;">Start Game</button>
+        </div>
+    </div>
+    
+    <script src="snake.js"></script>
+</body>
+</html>

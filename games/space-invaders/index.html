@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders - Golden Hour</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="spaceinvaders.css">
+    <script src="../../games-audio.js"></script>
+</head>
+<body>
+    <div class="game-header">
+        <a href="../../index.html" class="back-btn">⬅ Back to Golden Hour</a>
+        <h2>Space Invaders</h2>
+        <button class="btn btn-secondary btn-audio-toggle">🔊 Music: On</button>
+    </div>
+    
+    <div class="game-wrapper">
+        <div class="game-area">
+            <div class="scoreboard">
+                <div>Score: <span id="score-val" class="score-val">0</span></div>
+                <div>Lives: <span id="lives-val" class="score-val">3</span></div>
+            </div>
+
+            <canvas id="invaders-canvas" width="400" height="400"></canvas>
+
+            <div class="controls-info">
+                Use <strong>Left/Right Arrows</strong> or <strong>A/D</strong> to move, <strong>Spacebar</strong> to shoot.
+            </div>
+
+            <button class="btn btn-primary" id="btn-restart" style="margin-top: 1rem;">Start Game</button>
+        </div>
+    </div>
+    
+    <script src="spaceinvaders.js"></script>
+</body>
+</html>

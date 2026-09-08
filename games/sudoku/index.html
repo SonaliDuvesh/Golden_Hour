@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku - Golden Hour</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="sudoku.css">
+    <script src="../../games-audio.js"></script>
+</head>
+<body>
+    <div class="game-header">
+        <a href="../../index.html" class="back-btn">⬅ Back to Golden Hour</a>
+        <h2>Sudoku</h2>
+        <button class="btn btn-secondary btn-audio-toggle">🔊 Music: On</button>
+    </div>
+    
+    <div class="game-wrapper">
+        <div class="game-area">
+            <div class="controls-panel">
+                <div class="control-row">
+                    <label for="difficulty-select">Difficulty:</label>
+                    <select id="difficulty-select" class="input-select">
+                        <option value="easy" selected>Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="button-row">
+                    <button class="btn btn-primary" id="btn-check">Check Solution</button>
+                </div>
+            </div>
+
+            <div class="board-outer">
+                <div id="sudoku-board" class="sudoku-board"></div>
+            </div>
+
+            <div class="status-box" id="status-box">
+                Fill the empty cells with digits 1-9.
+            </div>
+
+            <button class="btn btn-secondary" id="btn-restart" style="margin-top: 1rem;">New Game</button>
+        </div>
+    </div>
+    
+    <script src="sudoku.js"></script>
+</body>
+</html>

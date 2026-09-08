@@ -1,0 +1,15 @@
+#invaders-canvas {
+    background: #090d16;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    display: block;
+    max-width: 100%;
+}
+
+.controls-info {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+}

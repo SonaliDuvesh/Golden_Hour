@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman - Golden Hour</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="hangman.css">
+    <script src="../../games-audio.js"></script>
+</head>
+<body>
+    <div class="game-header">
+        <a href="../../index.html" class="back-btn">⬅ Back to Golden Hour</a>
+        <h2>Hangman</h2>
+        <button class="btn btn-secondary btn-audio-toggle">🔊 Music: On</button>
+    </div>
+    
+    <div class="game-wrapper">
+        <div class="game-area">
+            <div class="hangman-container">
+                <canvas id="hangman-canvas" width="200" height="220"></canvas>
+                
+                <div class="word-display" id="word-display">
+                    
+                </div>
+            </div>
+
+            <div class="status-box" id="status-box">
+                Remaining attempts: <span id="remaining-tries">6</span>
+            </div>
+
+            <div class="keyboard" id="keyboard">
+                
+            </div>
+
+            <button class="btn btn-primary" id="btn-restart" style="margin-top: 1.5rem;">New Game</button>
+        </div>
+    </div>
+    
+    <script src="hangman.js"></script>
+</body>
+</html>

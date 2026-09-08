@@ -1,0 +1,64 @@
+.board-outer {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.mines-board {
+    display: grid;
+    grid-template-columns: repeat(9, 36px);
+    grid-template-rows: repeat(9, 36px);
+    gap: 2px;
+}
+
+.mine-cell {
+    background: #475569;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.15s ease;
+}
+
+.mine-cell:hover {
+    background: #64748b;
+}
+
+.mine-cell-revealed {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: default;
+}
+
+.mine-cell-revealed:hover {
+    background: #1e293b;
+}
+
+
+.num-1 { color: #38bdf8; }
+.num-2 { color: #34d399; }
+.num-3 { color: #f87171; }
+.num-4 { color: #c084fc; }
+.num-5 { color: #fbbf24; }
+.num-6 { color: #2dd4bf; }
+.num-7 { color: #f472b6; }
+.num-8 { color: #e2e8f0; }
+
+.mine-cell-mine {
+    background: #ef4444 !important;
+}
+
+.controls-info {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+}

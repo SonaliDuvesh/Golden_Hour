@@ -1,0 +1,95 @@
+.button-frame {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-choice {
+    font-size: 1.25rem;
+    padding: 1rem 1.8rem;
+    min-width: 140px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    transition: all 0.12s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #020617;
+    user-select: none;
+}
+
+#btn-rock {
+    background: linear-gradient(135deg, #fecdd3 0%, #fda4af 100%);
+    box-shadow: 0 5px 0 #e11d48, 0 8px 15px rgba(253, 164, 175, 0.2);
+}
+#btn-rock:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ffe4e6 0%, #fecdd3 100%);
+    box-shadow: 0 7px 0 #e11d48, 0 12px 20px rgba(253, 164, 175, 0.3);
+}
+#btn-rock:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #e11d48, 0 4px 8px rgba(253, 164, 175, 0.1);
+}
+
+#btn-paper {
+    background: linear-gradient(135deg, #fef08a 0%, #fde047 100%);
+    box-shadow: 0 5px 0 #ca8a04, 0 8px 15px rgba(254, 240, 138, 0.2);
+}
+#btn-paper:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%);
+    box-shadow: 0 7px 0 #ca8a04, 0 12px 20px rgba(254, 240, 138, 0.3);
+}
+#btn-paper:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #ca8a04, 0 4px 8px rgba(254, 240, 138, 0.1);
+}
+
+#btn-scissor {
+    background: linear-gradient(135deg, #a5f3fc 0%, #67e8f9 100%);
+    box-shadow: 0 5px 0 #0891b2, 0 8px 15px rgba(165, 243, 252, 0.2);
+}
+#btn-scissor:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #cffafe 0%, #a5f3fc 100%);
+    box-shadow: 0 7px 0 #0891b2, 0 12px 20px rgba(165, 243, 252, 0.3);
+}
+#btn-scissor:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #0891b2, 0 4px 8px rgba(165, 243, 252, 0.1);
+}
+
+.result-box {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-color);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#result-label {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: pre-line;
+    color: var(--pastel-blue);
+    text-shadow: 0 0 12px rgba(165, 243, 252, 0.25);
+    line-height: 1.5;
+}
+
+#computer-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+

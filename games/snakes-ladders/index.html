@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snakes & Ladders - Golden Hour</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="snakesladders.css">
+    <script src="../../games-audio.js"></script>
+</head>
+<body>
+    <div class="game-header">
+        <a href="../../index.html" class="back-btn">⬅ Back to Golden Hour</a>
+        <h2>Snakes & Ladders</h2>
+        <button class="btn btn-secondary btn-audio-toggle">🔊 Music: On</button>
+    </div>
+    
+    <div class="game-wrapper">
+        <div class="game-area">
+            <div class="game-container">
+                <div class="board-outer">
+                    <div id="board" class="board"></div>
+                    <div class="starting-area" id="starting-area">
+                        <div class="starting-base-title">Starting Base</div>
+                        <div class="starting-tokens">
+                            <div class="starting-slot" id="p1-start-slot"></div>
+                            <div class="starting-slot" id="cpu-start-slot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls-panel">
+                    <div class="turn-indicator" id="turn-indicator">Your Turn!</div>
+                    
+                    <div class="dice-area">
+                        <div class="dice" id="dice-element">🎲</div>
+                        <button class="btn btn-primary" id="btn-roll">Roll Dice</button>
+                        <button class="btn btn-success" id="btn-restart" style="display: none; margin-top: 0.5rem; width: 100%;">Play Again</button>
+                    </div>
+
+                    <div class="status-box" id="status-box">
+                        Roll a 1 to enter the board!
+                    </div>
+
+                    <div class="legend">
+                        <div><span class="legend-color p1-color"></span> Player (Blue)</div>
+                        <div><span class="legend-color cpu-color"></span> Computer (Red)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="snakesladders.js"></script>
+</body>
+</html>

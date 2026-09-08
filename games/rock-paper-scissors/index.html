@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Golden Hour</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="rps.css">
+    <script src="../../games-audio.js"></script>
+</head>
+<body>
+    <div class="game-header">
+        <a href="../../index.html" class="back-btn">⬅ Back to Golden Hour</a>
+        <h2>Rock Paper Scissors</h2>
+        <button class="btn btn-secondary btn-audio-toggle">🔊 Music: On</button>
+    </div>
+    
+    <div class="game-wrapper">
+        <div class="game-area">
+            <div class="subtitle">Choose your move and let the computer respond.</div>
+            
+            <div class="scoreboard">
+                <div>Wins: <span id="wins-val" class="score-val">0</span></div>
+                <div>Losses: <span id="losses-val" class="score-val">0</span></div>
+                <div>Ties: <span id="ties-val" class="score-val">0</span></div>
+            </div>
+
+            <div class="button-frame">
+                <button class="btn btn-choice" id="btn-rock">🪨 Rock</button>
+                <button class="btn btn-choice" id="btn-paper">🗒️ Paper</button>
+                <button class="btn btn-choice" id="btn-scissor">✂️ Scissor</button>
+            </div>
+
+            <div class="result-box">
+                <div id="result-label">Ready when you are!</div>
+                <div id="computer-label">Computer is waiting...</div>
+            </div>
+
+            <button class="btn btn-secondary" id="btn-reset" style="margin-top: 1.5rem;">Reset Score</button>
+        </div>
+    </div>
+    
+    <script src="rps.js"></script>
+</body>
+</html>

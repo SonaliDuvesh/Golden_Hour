@@ -1,0 +1,54 @@
+.board-outer {
+    padding: 10px;
+    background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    border: 2px solid rgba(255,255,255,0.05);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.5), inset 0 2px 2px rgba(255,255,255,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
+    gap: 8px;
+    background: #0f172a;
+    border-radius: var(--radius-md);
+    padding: 8px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.grid-cell {
+    background: #1e293b;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    user-select: none;
+    transition: all 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+
+.tile-2 { background: radial-gradient(circle at 30% 30%, #f8fafc 0%, #e2e8f0 70%, #cbd5e1 100%); color: #0f172a; }
+.tile-4 { background: radial-gradient(circle at 30% 30%, #f1f5f9 0%, #cbd5e1 70%, #94a3b8 100%); color: #0f172a; }
+.tile-8 { background: radial-gradient(circle at 30% 30%, #ffedd5 0%, #fed7aa 70%, #f97316 100%); color: #0f172a; }
+.tile-16 { background: radial-gradient(circle at 30% 30%, #fed7aa 0%, #f97316 70%, #c2410c 100%); color: #ffffff; }
+.tile-32 { background: radial-gradient(circle at 30% 30%, #fee2e2 0%, #fca5a5 70%, #ef4444 100%); color: #ffffff; }
+.tile-64 { background: radial-gradient(circle at 30% 30%, #fecdd3 0%, #f43f5e 70%, #be123c 100%); color: #ffffff; }
+.tile-128 { background: radial-gradient(circle at 30% 30%, #fef9c3 0%, #fde047 70%, #eab308 100%); color: #0f172a; }
+.tile-256 { background: radial-gradient(circle at 30% 30%, #fef08a 0%, #eab308 70%, #a16207 100%); color: #ffffff; }
+.tile-512 { background: radial-gradient(circle at 30% 30%, #ecfccb 0%, #a3e635 70%, #65a30d 100%); color: #ffffff; }
+.tile-1024 { background: radial-gradient(circle at 30% 30%, #d1fae5 0%, #34d399 70%, #059669 100%); color: #ffffff; }
+.tile-2048 { background: radial-gradient(circle at 30% 30%, #cffafe 0%, #22d3ee 70%, #0891b2 100%); color: #ffffff; box-shadow: 0 0 16px rgba(34, 211, 238, 0.6); }
+.tile-super { background: radial-gradient(circle at 30% 30%, #f3e8ff 0%, #c084fc 70%, #9333ea 100%); color: #ffffff; box-shadow: 0 0 16px rgba(192, 132, 252, 0.6); }
+
+.controls-info {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Hour</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Quicksand:wght@500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="games-audio.js"></script>
+</head>
+
+<body>
+    
+    <div id="landing-screen" class="screen active">
+        
+        <div id="stage"></div>
+
+        
+        <header class="brand-header">
+            <h1 class="brand-title" id="brand-title">Golden Hour</h1>
+        </header>
+
+        
+        <div class="landing-interactive-hub">
+            <p class="arcade-subtitle">12 little games are waiting...</p>
+
+            <button class="btn-enter animate-pulse-glow" id="btn-enter" type="button">
+                <span>ENTER ARENA</span>
+                <span class="material-symbols-outlined icon-arrow">arrow_forward</span>
+            </button>
+
+            <div class="controls-cta-group">
+                <button class="audio-btn btn-theme-toggle" type="button">☀️ Theme: Light</button>
+                <button class="audio-btn btn-music-toggle" type="button">♪ Music: On</button>
+                <button class="audio-btn btn-sfx-toggle" type="button">🔊 Sounds: On</button>
+            </div>
+        </div>
+
+        
+        <div class="click-hint" id="click-hint" aria-hidden="true">
+            <span class="click-hint-dot"></span>
+            Click anywhere
+            <span class="click-hint-dot"></span>
+        </div>
+    </div>
+
+    
+    <div id="discovery-screen" class="screen">
+        
+        <canvas id="laser-bg"></canvas>
+
+        <header class="editorial-header">
+            <button class="btn-back" id="btn-back" type="button">
+                <span class="arrow">←</span> Entrance
+            </button>
+
+            
+            <div class="momo-dashboard-mascot">
+                <div class="momo-speech-bubble">
+                    <span id="momo-caption">Pick a game, friend!</span>
+                </div>
+                <div class="momo-mini-avatar">
+                    <div class="momo-mini-ear left"></div>
+                    <div class="momo-mini-ear right"></div>
+                    <div class="momo-mini-head">
+                        <div class="momo-mini-eyes">
+                            <span class="eye"></span>
+                            <span class="eye"></span>
+                        </div>
+                        <div class="momo-mini-blush">
+                            <span class="blush"></span>
+                            <span class="blush"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-audio-controls">
+                <button class="audio-btn btn-theme-toggle" type="button">☀️ Theme: Light</button>
+                <button class="audio-btn btn-music-toggle" type="button">♪ Music: On</button>
+                <button class="audio-btn btn-sfx-toggle" type="button">🔊 Sounds: On</button>
+            </div>
+        </header>
+
+        <main class="editorial-gallery-container">
+            
+            <div class="editorial-info-panel">
+                <div class="eyebrow-container">
+                    <span class="eyebrow-tag" id="eyebrow-tag">GOLDEN HOUR COLLECTION</span>
+                </div>
+                <h2 class="editorial-title" id="editorial-title">
+                    <span class="title-line1" id="title-line1">CAN’T KEEP YOUR</span>
+                    <span class="title-line2" id="title-line2">HANDS OFF?</span>
+                </h2>
+                <p class="editorial-description" id="editorial-description">
+                    <span class="quote-line quote-line1">You know you want more.</span>
+                    <span class="quote-line quote-line2">Come get some more.</span>
+                </p>
+                <div class="cta-wrapper">
+                    <button class="btn-play-hero" id="btn-play-hero" type="button">
+                        <span>PLAY GAME</span>
+                        <span class="material-symbols-outlined icon-arrow">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+            
+            <div class="deck-viewport" id="deck-viewport">
+                <div class="deck-cards-stack" id="deck-cards-stack">
+                    
+                </div>
+            </div>
+
+            
+            <div class="vertical-progress-nav">
+                <span class="progress-current" id="progress-current">01</span>
+                <div class="progress-track">
+                    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                </div>
+                <span class="progress-total" id="progress-total">12</span>
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="game-modal" class="game-modal">
+        <div class="game-modal-bar">
+            <button class="btn-exit-game" id="btn-exit-game" type="button">
+                <span class="arrow">←</span> Back to Gallery
+            </button>
+            <span class="game-modal-title" id="game-modal-title">Game Title</span>
+        </div>
+        <iframe id="game-iframe" class="game-iframe" src="about:blank"></iframe>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

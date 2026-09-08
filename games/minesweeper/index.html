@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper - Golden Hour</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="minesweeper.css">
+    <script src="../../games-audio.js"></script>
+</head>
+<body>
+    <div class="game-header">
+        <a href="../../index.html" class="back-btn">⬅ Back to Golden Hour</a>
+        <h2>Minesweeper</h2>
+        <button class="btn btn-secondary btn-audio-toggle">🔊 Music: On</button>
+    </div>
+    
+    <div class="game-wrapper">
+        <div class="game-area">
+            <div class="scoreboard" style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; margin-bottom: 1rem; font-weight: bold; font-size: 1.1rem; flex-wrap: wrap;">
+                <div>Difficulty: 
+                    <select id="difficulty-select" class="input-select" style="padding: 0.25rem 0.5rem; font-size: 0.9rem; font-weight: bold;">
+                        <option value="easy" selected>Easy (9x9)</option>
+                        <option value="medium">Medium (16x16)</option>
+                        <option value="hard">Hard (30x16)</option>
+                    </select>
+                </div>
+                <div>Mines Left: <span id="mines-count" class="score-val" style="color: var(--accent-red);">10</span></div>
+                <div>Time: <span id="timer-val" class="score-val" style="color: var(--accent-blue);">0</span>s</div>
+            </div>
+
+            <div class="board-outer">
+                <div id="mines-board" class="mines-board"></div>
+            </div>
+
+            <div class="controls-info">
+                <strong>Left Click</strong> to reveal, <strong>Right Click</strong> to flag/unflag.
+            </div>
+
+            <button class="btn btn-primary" id="btn-restart" style="margin-top: 1rem; width: 100%; max-width: 200px;">Restart Game</button>
+        </div>
+    </div>
+    
+    <script src="minesweeper.js"></script>
+</body>
+</html>

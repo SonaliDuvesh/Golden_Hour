@@ -1,0 +1,88 @@
+.controls-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.control-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.board-outer {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 1.5rem;
+}
+
+.sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    background: var(--bg-dark);
+}
+
+.sudoku-cell {
+    width: 40px;
+    height: 40px;
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: var(--font-sans);
+    outline: none;
+}
+
+.sudoku-cell:focus {
+    background: var(--bg-hover);
+}
+
+
+.border-top-thick {
+    border-top: 2px solid var(--accent-blue);
+}
+.border-left-thick {
+    border-left: 2px solid var(--accent-blue);
+}
+.border-bottom-thick {
+    border-bottom: 2px solid var(--accent-blue);
+}
+.border-right-thick {
+    border-right: 2px solid var(--accent-blue);
+}
+
+.cell-prefilled {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+.cell-error {
+    background: rgba(239, 68, 68, 0.3) !important;
+}
+
+.cell-correct {
+    background: rgba(52, 211, 153, 0.3) !important;
+}
+
+.status-box {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-weight: 600;
+}

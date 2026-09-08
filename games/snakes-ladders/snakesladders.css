@@ -1,0 +1,262 @@
+.game-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.board-outer {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    max-width: 100%;
+    padding: 8px;
+    background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5), inset 0 2px 4px rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.05);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    grid-template-rows: repeat(10, minmax(0, 1fr));
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-md);
+    background: #0f172a;
+    overflow: hidden;
+    gap: 1px; 
+}
+
+.cell {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.cell-even {
+    background: #161e31;
+}
+
+.cell-odd {
+    background: #1b253b;
+}
+
+.cell-number {
+    font-size: 0.7rem;
+    align-self: flex-start;
+    opacity: 0.65;
+    line-height: 1;
+}
+
+.cell-effect {
+    font-size: 0.55rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 1px 3px;
+    border-radius: 3px;
+    z-index: 1;
+    margin-top: 1px;
+    line-height: 1;
+}
+
+.cell-ladder {
+    background: linear-gradient(135deg, #161e31 0%, rgba(16, 185, 129, 0.12) 100%) !important;
+    color: var(--pastel-green);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.cell-ladder .cell-effect {
+    background: rgba(16, 185, 129, 0.2);
+}
+
+.cell-snake {
+    background: linear-gradient(135deg, #161e31 0%, rgba(239, 68, 68, 0.12) 100%) !important;
+    color: var(--pastel-pink);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.cell-snake .cell-effect {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.tokens-container {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 3px;
+    width: 100%;
+}
+
+
+.token {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.4), inset 0 -1.5px 3px rgba(0,0,0,0.5);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.token-p1 {
+    background: radial-gradient(circle at 35% 35%, #a5f3fc 0%, #0284c7 70%, #0369a1 100%);
+    filter: drop-shadow(0 0 3px rgba(165, 243, 252, 0.3));
+}
+
+.token-cpu {
+    background: radial-gradient(circle at 35% 35%, #fecdd3 0%, #e11d48 70%, #9f1239 100%);
+    filter: drop-shadow(0 0 3px rgba(254, 205, 211, 0.3));
+}
+
+.controls-panel {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.turn-indicator {
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--pastel-blue);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.dice-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.dice {
+    font-size: 3.2rem;
+    line-height: 1;
+    height: 76px;
+    width: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f172a;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f1f5f9 60%, #cbd5e1 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 5px 0 #94a3b8, 0 10px 15px rgba(0, 0, 0, 0.4), inset 0 2px 2px rgba(255, 255, 255, 0.8);
+    transition: transform 0.15s ease;
+    user-select: none;
+    font-weight: bold;
+}
+
+.dice-rolling {
+    animation: spin3D 0.5s linear infinite;
+}
+
+@keyframes spin3D {
+    0% { transform: rotate(0deg) scale(1) skewX(0deg); }
+    33% { transform: rotate(120deg) scale(1.15) skewX(4deg); }
+    66% { transform: rotate(240deg) scale(0.9) skewY(-4deg); }
+    100% { transform: rotate(360deg) scale(1) skewX(0deg); }
+}
+
+.status-box {
+    min-height: 70px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.legend {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    font-weight: 600;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
+    vertical-align: middle;
+}
+
+.p1-color {
+    background: radial-gradient(circle at 35% 35%, #a5f3fc 0%, #0284c7 70%, #0369a1 100%);
+}
+
+.cpu-color {
+    background: radial-gradient(circle at 35% 35%, #fecdd3 0%, #e11d48 70%, #9f1239 100%);
+}
+
+.starting-area {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.starting-base-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.starting-tokens {
+    display: flex;
+    gap: 12px;
+}
+
+.starting-slot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}

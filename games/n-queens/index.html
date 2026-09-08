@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Queens Solver - Golden Hour</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="nqueens.css">
+    <script src="../../games-audio.js"></script>
+</head>
+<body>
+    <div class="game-header">
+        <a href="../../index.html" class="back-btn">⬅ Back to Golden Hour</a>
+        <h2>N-Queens Solver</h2>
+        <button class="btn btn-secondary btn-audio-toggle">🔊 Music: On</button>
+    </div>
+    
+    <div class="game-wrapper">
+        <div class="game-area">
+            <div class="controls-panel">
+                <div class="control-row">
+                    <label for="n-select">Difficulty:</label>
+                    <select id="n-select" class="input-select">
+                        <option value="4">Easy (4x4)</option>
+                        <option value="6">Medium (6x6)</option>
+                        <option value="8" selected>Hard (8x8)</option>
+                    </select>
+                </div>
+                <div class="progress-indicator" id="queens-progress" style="margin: 0.5rem 0; font-weight: bold; font-size: 1.1rem; text-align: center; color: var(--accent-blue);">
+                    Queens Placed: 0 / 8
+                </div>
+                <div class="button-row" id="game-controls">
+                    <button class="btn btn-primary" id="btn-check">Check Solution</button>
+                    <button class="btn btn-secondary" id="btn-hint">Hint</button>
+                    <button class="btn btn-secondary" id="btn-clear">Reset</button>
+                </div>
+                <div class="button-row solved-row" id="solved-controls" style="display: none; gap: 0.5rem; margin-top: 0.5rem; justify-content: center;">
+                    <button class="btn btn-success" id="btn-next">Next Puzzle</button>
+                    <button class="btn btn-primary" id="btn-restart">Play Again</button>
+                </div>
+            </div>
+
+            <div id="chessboard-container" class="chessboard-container">
+                <div id="chessboard" class="chessboard"></div>
+            </div>
+
+            <div class="status-box" id="status-box">
+                Place 8 queens on the board without conflicts!
+            </div>
+        </div>
+    </div>
+    
+    <script src="nqueens.js"></script>
+</body>
+</html>

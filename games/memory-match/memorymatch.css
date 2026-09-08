@@ -1,0 +1,84 @@
+.board-outer {
+    padding: 12px;
+    background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    border: 2px solid rgba(255,255,255,0.05);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5), inset 0 2px 4px rgba(255,255,255,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: repeat(4, 75px);
+    gap: 12px;
+    perspective: 800px;
+}
+
+.memory-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.memory-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.card-back {
+    background: radial-gradient(circle at 30% 30%, #3b4f6e 0%, #1e293b 70%, #0f172a 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: var(--pastel-blue);
+    box-shadow: 0 5px 0 #0f172a, 0 8px 12px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(255, 255, 255, 0.15);
+}
+
+.card-back:hover {
+    background: radial-gradient(circle at 30% 30%, #4c6387 0%, #1e293b 70%, #0f172a 100%);
+    border-color: var(--pastel-blue);
+}
+
+.card-front {
+    background: radial-gradient(circle at 30% 30%, #475569 0%, #334155 70%, #1e293b 100%);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 5px 0 #0f172a, 0 8px 12px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(255, 255, 255, 0.2);
+    transform: rotateY(180deg);
+}
+
+.card-matched {
+    cursor: default;
+}
+
+.card-matched .card-front {
+    border-color: #34d399;
+    background: radial-gradient(circle at 30% 30%, #059669 0%, #065f46 70%, #022c22 100%);
+    box-shadow: 0 0 16px rgba(52, 211, 153, 0.4);
+}
+
+.status-box {
+    width: 100%;
+    max-width: 330px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
