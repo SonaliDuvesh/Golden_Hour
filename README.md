@@ -37,6 +37,10 @@ graph TD
 
 ---
 
+ ![Golden Hour](image2.png)
+ 
+---
+
 ## The 12 Little Games Waiting For You
 
 Each game sits inside its own physical 3D card deck module:
