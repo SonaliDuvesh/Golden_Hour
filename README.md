@@ -1,6 +1,6 @@
 <div align="center">
 
-# GOLDEN HOUR
+# GOLDEN HOUR - *A Gamified Multi-Experience Digital Playground for Interactive Entertainment & Gaming*
 
 ### *Feeling a little reckless? Go on. Give in.*
 
